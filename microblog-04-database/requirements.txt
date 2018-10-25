@@ -1,0 +1,8 @@
+flask
+flask-wtf
+flask-sqlalchemy
+flask-migrate
+flask-login
+pymongo
+python-testdata
+ForgeryPy3
