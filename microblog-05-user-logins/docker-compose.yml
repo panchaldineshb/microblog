@@ -1,0 +1,18 @@
+web:
+  build: .
+  command: flask run
+  ports:
+    - 5000
+  volumes:
+    - .:/todo
+
+lb:
+  image: dockercloud/haproxy
+  links:
+    - web
+  environment:
+      - BALANCE=leastconn
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  ports:
+    - 80:80
