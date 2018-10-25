@@ -1,0 +1,4 @@
+flask
+flask-wtf
+pymongo
+python-testdata
